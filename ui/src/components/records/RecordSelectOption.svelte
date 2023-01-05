@@ -46,10 +46,10 @@
 />
 
 <div class="content">
-    <div class="block txt-ellipsis">{item.id}</div>
     {#if meta !== "" && meta !== item.id}
-        <small class="block txt-hint txt-ellipsis">{meta}</small>
+        <div class="block txt-ellipsis">{meta}</div>
     {/if}
+    <small class="block txt-hint txt-ellipsis">{item.id}</small>
 </div>
 
 <style>

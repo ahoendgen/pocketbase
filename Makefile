@@ -7,3 +7,7 @@ test:
 test-report:
 	go test ./... -v --cover -coverprofile=coverage.out
 	go tool cover -html=coverage.out
+
+build:
+	cd ui && npm run build
+	cd examples/base && go build && mv base pocketbase && chmod +x pocketbase

@@ -13,6 +13,7 @@
         text = text || "";
         return text.length > 200 ? text.substring(0, 200) : text;
     }
+
 </script>
 
 <td class="col-type-{field.type} col-field-{field.name}">
@@ -47,8 +48,8 @@
         </div>
     {:else if field.type === "relation" || field.type === "user"}
         <div class="inline-flex">
-            {#each CommonHelper.toArray(record[field.name]).slice(0, 20) as item, i (i + item)}
-                <IdLabel id={item} />
+            {#each CommonHelper.toArray(record.expand[field.name]) as item, i (i + item)}
+                <IdLabel id={item.name} />
             {/each}
             {#if CommonHelper.toArray(record[field.name]).length > 20}
                 ...

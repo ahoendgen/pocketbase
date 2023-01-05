@@ -55,6 +55,9 @@
     }
 
     $: collumnsToHide = [].concat(
+        [
+            { id: "@id", name: "id" }
+        ],
         collection.isAuth
             ? [
                   { id: "@username", name: "username" },
@@ -108,10 +111,17 @@
 
         isLoading = true;
 
+        let expand = "";
+        try {
+             expand = collection.schema.filter(schema => schema.type === "relation").map(schema => schema.name).join(",");
+        } catch (e) {
+        }
+
         return ApiClient.collection(collection.id)
             .getList(page, 30, {
                 sort: sort,
                 filter: filter,
+                expand
             })
             .then(async (result) => {
                 if (page <= 1) {
