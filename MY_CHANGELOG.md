@@ -12,4 +12,3 @@
 - feat: make `id` hideable in record list
 - chore: create build script for base `make build`
 - chore: remove and ignore assets from git
-- 
