@@ -55,9 +55,10 @@ export async function loadCollections(activeId = null) {
     collections.set([]);
 
     return ApiClient.collections.getFullList(200, {
-        "sort": "+created",
+        "sort": "+name",
     })
         .then((items) => {
+
             collections.set(CommonHelper.sortCollections(items));
 
             const item = activeId && CommonHelper.findByKey(items, "id", activeId);

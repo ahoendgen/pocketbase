@@ -1,6 +1,7 @@
 ## 2023-01-06
 
 - feat: move auth collections at the end of the list
+- feat: order collections by name instead of creation date
 
 ## 2023-01-05
 
