@@ -2,6 +2,7 @@
 
 - feat: move auth collections at the end of the list
 - feat: order collections by name instead of creation date
+- chore: remove and ignore `ui/dist` folder because it's completely generated
 
 ## 2023-01-05
 
