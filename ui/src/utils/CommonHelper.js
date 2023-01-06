@@ -1058,7 +1058,7 @@ export default class CommonHelper {
             }
         }
 
-        return [].concat(authCollections, singleCollections, baseCollections);
+        return [].concat(singleCollections, baseCollections, authCollections);
     }
 
 

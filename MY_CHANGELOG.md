@@ -1,3 +1,7 @@
+## 2023-01-06
+
+- feat: move auth collections at the end of the list
+
 ## 2023-01-05
 
 - feat: Show `name` field instead of `id` for relations in record list
