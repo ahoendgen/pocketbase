@@ -1,3 +1,7 @@
+## 2023-01-08
+
+- chore: rebase `upstream/master`
+
 ## 2023-01-06
 
 - feat: move auth collections at the end of the list
